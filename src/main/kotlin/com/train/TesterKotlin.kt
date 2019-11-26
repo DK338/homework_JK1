@@ -2,18 +2,18 @@ package com.train
 
 import java.util.*
 
-val ONCETICKET:Int=1;
-val TWICETICKET:Int=2;
+const val ONCETICKET:Int=1;
+const val TWICETICKET:Int=2;
 fun main(){
     val scanner = Scanner(System.`in`)
     println("Please enter number of tickets:")
-    val totalticket = scanner.nextInt()
+    val totalTicket = scanner.nextInt()
     println("How many round-trip tickets:")
-    val twiceticket = scanner.nextInt()
-    val onecticket = totalticket - twiceticket
-    val onecticketObj = Ticket(ONCETICKET, onecticket)
-    val twiceticketobj = Ticket(TWICETICKET, twiceticket)
-    println( "Total tickets: $totalticket Round-trip: $twiceticket Total: ${onecticketObj.sumPrice+twiceticketobj.sumPrice}")
+    val twiceTicket = scanner.nextInt()
+    val onceTicket = totalTicket - twiceTicket
+    val onceTicketObj = Ticket(ONCETICKET, onceTicket)
+    val twiceTicketObj = Ticket(TWICETICKET, twiceTicket)
+    println( "Total tickets: $totalTicket Round-trip: $twiceTicket Total: ${onceTicketObj.sumPrice+twiceTicketObj.sumPrice}")
     scanner.close()
 }
 
